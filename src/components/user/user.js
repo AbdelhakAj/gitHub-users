@@ -2,7 +2,7 @@ import React from "react";
 
 import "./user.scss";
 
-const User = ({ data }) => {
+const User = ({ data, onViewRepos }) => {
   const { imgURL, id, name } = data;
   return (
     <div className="user">
@@ -21,7 +21,10 @@ const User = ({ data }) => {
           <span className="user-id">{id}</span>
         </div>
       </div>
-      <button className="user-repos-btn"> view repos </button>
+      <button className="user-repos-btn" onClick={() => onViewRepos(name)}>
+        {" "}
+        view repos{" "}
+      </button>
     </div>
   );
 };

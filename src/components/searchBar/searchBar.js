@@ -11,6 +11,7 @@ const SearchBar = ({ onSearch }) => {
         className="search-bar-username"
         type="text"
         name="username"
+        placeholder="write a github username here"
         value={username}
         onChange={e => setUsername(e.target.value)}
       />
