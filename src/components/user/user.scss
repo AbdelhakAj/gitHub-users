@@ -1,0 +1,43 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin: 8px auto;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #9e9e9e14;
+
+  &-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &-details {
+    text-align: left;
+  }
+
+  &-name,
+  &-id {
+    margin: 0 8px;
+  }
+
+  &-id {
+    font-size: 12px;
+  }
+
+  &-img {
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  &-repos-btn {
+    background: #3f51b5;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 0 16px;
+  }
+}
