@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Repos /> renders repos 1`] = `
+<div
+  className="repos"
+>
+  <h2
+    className="repos-name"
+  >
+    
+  </h2>
+  <span
+    className="repos-fullname"
+  >
+    Full Name: 
+    
+  </span>
+  <span
+    className="repos-id"
+  >
+    id :
+    
+  </span>
+</div>
+`;

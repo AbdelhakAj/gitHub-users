@@ -1,9 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render } from "@testing-library/react";
 
-test('renders learn react link', () => {
+import App from "./App";
+
+test("renders header", () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const h1 = getByText("github users");
+  expect(h1).toBeInTheDocument();
 });

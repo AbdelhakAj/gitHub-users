@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar /> renders SearchBar 1`] = `
+<div
+  className="search-bar"
+>
+  <input
+    className="search-bar-username"
+    id="username"
+    name="username"
+    onChange={[Function]}
+    placeholder="write a github username here"
+    type="text"
+    value=""
+  />
+  <button
+    className="search-bar-btn"
+    onClick={[Function]}
+  >
+    search
+  </button>
+</div>
+`;
