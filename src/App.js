@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 import SearchBar from "./components/searchBar";
 import User from "./components/user";
@@ -15,24 +16,37 @@ function App() {
 
   const getUser = username => {
     setIsLoading(true);
-    fetch(`https://api.github.com/search/users?q=${username}`)
-      .then(response => (response.ok ? response.json() : setError(true)))
-      .then(data => {
-        if (data) {
-          setUserList(data.items);
+    axios
+      .get(`https://api.github.com/search/users?q=${username}`)
+      .then(response => {
+        const { data, status } = response;
+        if (status !== 200) {
+          setError(true);
+        } else {
+          if (data) {
+            setUserList(data.items);
+          }
         }
+
         setIsLoading(false);
       });
   };
 
   const getReposByUser = username => {
     setIsLoading(true);
-    fetch(`https://api.github.com/users/${username}/repos`)
-      .then(response => (response.ok ? response.json() : setError(true)))
-      .then(data => {
-        if (data) {
-          setReposList(data);
+    axios
+      .get(`https://api.github.com/users/${username}/repos`)
+      .then(response => {
+        const { data, status } = response;
+        console.log("response", response);
+        if (status !== 200) {
+          setError(true);
+        } else {
+          if (data) {
+            setReposList(data);
+          }
         }
+
         setIsLoading(false);
       });
   };
